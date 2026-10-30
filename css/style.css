@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* centra todo y le da un ancho maximo */
+#app {
+  max-width: 450px;
+  margin: 40px auto;
+}
+
+/* caja de la barra con el porcentaje y el "5 de 20" */
+.progreso {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+/* el fondo de la barra, siempre mide lo mismo */
+.barra-contenedor {
+  flex: 1;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 6px;
+}
+
+/* la parte que se llena, su ancho lo cambia vue */
+.barra-relleno {
+  height: 100%;
+  background-color: #bbb;
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+.tarjeta {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* los 3 botones, uno a cada lado y el otro en el medio */
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 15 - Flash Cards</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- vue solo funciona dentro de este div, por eso tiene el id -->
+  <div id="app">
+    <h1>Flash Cards</h1>
+
+    <!-- le paso a la barra en que tarjeta voy y cuantas hay en total -->
+    <barra :indice="indice" :total="tarjetas.length"></barra>
+
+    <!-- si estoy viendo la respuesta le mando la respuesta, si no la pregunta -->
+    <tarjeta :texto="mostrarRespuesta ? tarjetas[indice].respuesta : tarjetas[indice].pregunta"></tarjeta>
+
+    <!-- los botones avisan cuando les hacen clic y aqui ejecuto la funcion -->
+    <botones
+      :mostrar-respuesta="mostrarRespuesta"
+      @anterior="anterior"
+      @voltear="voltear"
+      @siguiente="siguiente">
+    </botones>
+  </div>
+
+  <!-- primero cargo vue y despues mi script, al reves da error -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>|
